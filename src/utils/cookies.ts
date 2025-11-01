@@ -1,5 +1,5 @@
 export const setCookie = (name: string, value: string, days = 1) => {
-    const expires = new Date(Date.now() + days * 864e5).toUTCString()
+    const expires = new Date(Date.now() + days * 864e5).toUTCString() // 864e5 = 1 day in milliseconds
     document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`
 }
 
